@@ -1,49 +1,50 @@
-const l = [
-  "/_app/immutable/assets/_page-46b8cf66.css",
-  "/_app/immutable/chunks/1-36bbe4a7.js",
-  "/_app/immutable/chunks/0-eaa10265.js",
-  "/_app/immutable/chunks/2-d284350c.js",
-  "/_app/immutable/chunks/singletons-e24ed815.js",
-  "/_app/immutable/components/error.svelte-641b5a22.js",
-  "/_app/immutable/components/layout.svelte-229c5288.js",
-  "/_app/immutable/chunks/index-b2019f8f.js",
-  "/_app/immutable/start-697a1527.js",
-  "/_app/immutable/components/pages/_page.svelte-e4c58566.js"
+const c = [
+  "/letkwet.github.io/internal/immutable/assets/_page-46b8cf66.css",
+  "/letkwet.github.io/internal/immutable/chunks/singletons-bfa7c017.js",
+  "/letkwet.github.io/internal/immutable/chunks/0-eaa10265.js",
+  "/letkwet.github.io/internal/immutable/chunks/1-11380396.js",
+  "/letkwet.github.io/internal/immutable/components/layout.svelte-229c5288.js",
+  "/letkwet.github.io/internal/immutable/chunks/shared-23917130.js",
+  "/letkwet.github.io/internal/immutable/components/error.svelte-35715d80.js",
+  "/letkwet.github.io/internal/immutable/chunks/2-1e8f59d7.js",
+  "/letkwet.github.io/internal/immutable/chunks/index-b2019f8f.js",
+  "/letkwet.github.io/internal/immutable/start-68ef40e2.js",
+  "/letkwet.github.io/internal/immutable/components/pages/_page.svelte-4b5e4694.js"
 ], u = [
-  "/letkwet.ico",
-  "/letkwet.svg"
-], o = "1674918066806", n = `cache-${o}`, i = [
-  ...l,
+  "/letkwet.github.io/letkwet.ico",
+  "/letkwet.github.io/letkwet.svg"
+], o = "1674919638107", n = `cache-${o}`, l = [
+  ...c,
   // the app itself
   ...u
   // everything in `static`
 ];
-self.addEventListener("install", (e) => {
-  async function t() {
-    await (await caches.open(n)).addAll(i);
+self.addEventListener("install", (t) => {
+  async function e() {
+    await (await caches.open(n)).addAll(l);
   }
-  e.waitUntil(t());
+  t.waitUntil(e());
 });
-self.addEventListener("activate", (e) => {
-  async function t() {
-    for (const a of await caches.keys())
-      a !== n && await caches.delete(a);
+self.addEventListener("activate", (t) => {
+  async function e() {
+    for (const i of await caches.keys())
+      i !== n && await caches.delete(i);
   }
-  e.waitUntil(t());
+  t.waitUntil(e());
 });
-self.addEventListener("fetch", (e) => {
-  if (e.request.method !== "GET")
+self.addEventListener("fetch", (t) => {
+  if (t.request.method !== "GET")
     return;
-  async function t() {
-    const a = new URL(e.request.url), s = await caches.open(n);
-    if (i.includes(a.pathname))
-      return s.match(e.request);
+  async function e() {
+    const i = new URL(t.request.url), s = await caches.open(n);
+    if (l.includes(i.pathname))
+      return s.match(t.request);
     try {
-      const c = await fetch(e.request);
-      return c.status === 200 && s.put(e.request, c.clone()), c;
+      const a = await fetch(t.request);
+      return a.status === 200 && s.put(t.request, a.clone()), a;
     } catch {
-      return s.match(e.request);
+      return s.match(t.request);
     }
   }
-  e.respondWith(t());
+  t.respondWith(e());
 });
