@@ -2,50 +2,42 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/letkwet.github.io/letkwet.ico" />
+		<link rel="icon" href="./letkwet.ico" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="/letkwet.github.io/internal/immutable/assets/_page-46b8cf66.css" rel="stylesheet">
-		<link rel="modulepreload" href="/letkwet.github.io/internal/immutable/start-68ef40e2.js">
-		<link rel="modulepreload" href="/letkwet.github.io/internal/immutable/chunks/index-b2019f8f.js">
-		<link rel="modulepreload" href="/letkwet.github.io/internal/immutable/chunks/singletons-bfa7c017.js">
-		<link rel="modulepreload" href="/letkwet.github.io/internal/immutable/chunks/shared-23917130.js">
-		<link rel="modulepreload" href="/letkwet.github.io/internal/immutable/components/layout.svelte-229c5288.js">
-		<link rel="modulepreload" href="/letkwet.github.io/internal/immutable/components/pages/_page.svelte-4b5e4694.js">
-		<script>
-			if ('serviceWorker' in navigator) {
-				addEventListener('load', function () {
-					navigator.serviceWorker.register('/letkwet.github.io/service-worker.js');
-				});
-			}
-		</script>
+		
+		<link rel="modulepreload" href="./internal/immutable/entry/start.819940cc.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/scheduler.e86c4733.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.94d84c50.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/paths.17fd9db3.js">
+		<link rel="modulepreload" href="./internal/immutable/entry/app.6e427f90.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index.1e60aee8.js">
 	</head>
 	<body>
 		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_7t7vnc = {
+						assets: "/letkwet.github.io",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
+					const element = document.currentScript.parentElement;
 
-<main class="container mx-auto"><nav><div class="flex gap-10 p-2 items-center"><div><img src="/letkwet.github.io/letkwet.svg" class="w-8" alt="Letkwet"></div>
-      <div><input class="w-20" type="file" accept=".cho,.chopro,.chord"></div></div></nav>
-  <div><div class="h-40 px-4 py-10 text-gray-400">Please select a chordpro file (.cho, .chopro., .cpro) by clicking browse.
-      </div></div></main>
+					Promise.all([
+						import("./internal/immutable/entry/start.819940cc.js"),
+						import("./internal/immutable/entry/app.6e427f90.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
 
-
-		<script type="module" data-sveltekit-hydrate="1fr41tz">
-			import { start } from "/letkwet.github.io/internal/immutable/start-68ef40e2.js";
-
-			start({
-				env: {},
-				paths: {"assets":"/letkwet.github.io","base":"/letkwet.github.io"},
-				target: document.querySelector('[data-sveltekit-hydrate="1fr41tz"]').parentNode,
-				version: "1674919638107",
-				hydrate: {
-					node_ids: [0, 2],
-					data: [null,{type:"data",data:null,uses:{}}],
-					form: null,
-					error: null
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('./service-worker.js');
+						});
+					}
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>
