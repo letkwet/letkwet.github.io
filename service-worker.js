@@ -1,19 +1,19 @@
 const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), r = [
-  e + "/internal/immutable/entry/app.203eee05.js",
+  e + "/internal/immutable/entry/app.424eb660.js",
   e + "/internal/immutable/nodes/0.75da259c.js",
-  e + "/internal/immutable/nodes/1.cea9196b.js",
+  e + "/internal/immutable/nodes/1.2514c7ac.js",
   e + "/internal/immutable/assets/2.3edaff30.css",
-  e + "/internal/immutable/nodes/2.4b5a7408.js",
+  e + "/internal/immutable/nodes/2.39a939af.js",
   e + "/internal/immutable/chunks/index.d95b2dc9.js",
-  e + "/internal/immutable/chunks/paths.799a6e74.js",
+  e + "/internal/immutable/chunks/paths.6892479b.js",
   e + "/internal/immutable/chunks/scheduler.6ae58f8a.js",
-  e + "/internal/immutable/chunks/singletons.f25c0e2f.js",
-  e + "/internal/immutable/entry/start.149478dd.js"
+  e + "/internal/immutable/chunks/singletons.5d7c7577.js",
+  e + "/internal/immutable/entry/start.8197259f.js"
 ], o = [
   e + "/letkwet.ico",
   e + "/letkwet.svg",
   e + "/songs.json"
-], u = "1688536943472", i = `cache-${u}`, l = [
+], u = "1688566274632", i = `cache-${u}`, l = [
   ...r,
   // the app itself
   ...o
