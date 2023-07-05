@@ -1,52 +1,50 @@
 const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), r = [
-  e + "/internal/immutable/entry/app.6e427f90.js",
-  e + "/internal/immutable/assets/0.76b0c738.css",
-  e + "/internal/immutable/nodes/0.660d6910.js",
-  e + "/internal/immutable/nodes/1.0a7e994f.js",
-  e + "/internal/immutable/nodes/2.4170e81c.js",
-  e + "/internal/immutable/assets/ChordModal.c6928825.css",
-  e + "/internal/immutable/chunks/ChordModal.svelte_svelte_type_style_lang.69c02d9f.js",
-  e + "/internal/immutable/chunks/index.1e60aee8.js",
-  e + "/internal/immutable/chunks/paths.17fd9db3.js",
-  e + "/internal/immutable/chunks/scheduler.e86c4733.js",
-  e + "/internal/immutable/chunks/singletons.94d84c50.js",
-  e + "/internal/immutable/entry/start.819940cc.js"
+  e + "/internal/immutable/entry/app.203eee05.js",
+  e + "/internal/immutable/nodes/0.75da259c.js",
+  e + "/internal/immutable/nodes/1.cea9196b.js",
+  e + "/internal/immutable/assets/2.3edaff30.css",
+  e + "/internal/immutable/nodes/2.4b5a7408.js",
+  e + "/internal/immutable/chunks/index.d95b2dc9.js",
+  e + "/internal/immutable/chunks/paths.799a6e74.js",
+  e + "/internal/immutable/chunks/scheduler.6ae58f8a.js",
+  e + "/internal/immutable/chunks/singletons.f25c0e2f.js",
+  e + "/internal/immutable/entry/start.149478dd.js"
 ], o = [
   e + "/letkwet.ico",
   e + "/letkwet.svg",
   e + "/songs.json"
-], u = "1688488913894", i = `cache-${u}`, l = [
+], u = "1688536943472", i = `cache-${u}`, l = [
   ...r,
   // the app itself
   ...o
   // everything in `static`
 ];
 self.addEventListener("install", (t) => {
-  async function s() {
+  async function a() {
     await (await caches.open(i)).addAll(l);
   }
-  t.waitUntil(s());
+  t.waitUntil(a());
 });
 self.addEventListener("activate", (t) => {
-  async function s() {
-    for (const n of await caches.keys())
-      n !== i && await caches.delete(n);
+  async function a() {
+    for (const s of await caches.keys())
+      s !== i && await caches.delete(s);
   }
-  t.waitUntil(s());
+  t.waitUntil(a());
 });
 self.addEventListener("fetch", (t) => {
   if (t.request.method !== "GET")
     return;
-  async function s() {
-    const n = new URL(t.request.url), a = await caches.open(i);
-    if (l.includes(n.pathname))
-      return a.match(t.request);
+  async function a() {
+    const s = new URL(t.request.url), n = await caches.open(i);
+    if (l.includes(s.pathname))
+      return n.match(t.request);
     try {
       const c = await fetch(t.request);
-      return c.status === 200 && a.put(t.request, c.clone()), c;
+      return c.status === 200 && n.put(t.request, c.clone()), c;
     } catch {
-      return a.match(t.request);
+      return n.match(t.request);
     }
   }
-  t.respondWith(s());
+  t.respondWith(a());
 });
