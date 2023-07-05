@@ -1,22 +1,22 @@
-const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), r = [
-  e + "/internal/immutable/entry/app.424eb660.js",
+const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), o = [
+  e + "/internal/immutable/entry/app.ecc02e42.js",
   e + "/internal/immutable/nodes/0.75da259c.js",
-  e + "/internal/immutable/nodes/1.2514c7ac.js",
+  e + "/internal/immutable/nodes/1.97bc8a8d.js",
   e + "/internal/immutable/assets/2.3edaff30.css",
-  e + "/internal/immutable/nodes/2.39a939af.js",
+  e + "/internal/immutable/nodes/2.15a8c26d.js",
   e + "/internal/immutable/chunks/index.d95b2dc9.js",
-  e + "/internal/immutable/chunks/paths.6892479b.js",
+  e + "/internal/immutable/chunks/paths.a98c476e.js",
   e + "/internal/immutable/chunks/scheduler.6ae58f8a.js",
-  e + "/internal/immutable/chunks/singletons.5d7c7577.js",
-  e + "/internal/immutable/entry/start.8197259f.js"
-], o = [
+  e + "/internal/immutable/chunks/singletons.22e443b9.js",
+  e + "/internal/immutable/entry/start.9ffb4fe9.js"
+], r = [
   e + "/letkwet.ico",
   e + "/letkwet.svg",
   e + "/songs.json"
-], u = "1688566274632", i = `cache-${u}`, l = [
-  ...r,
+], u = "1688567835277", i = `cache-${u}`, l = [
+  ...o,
   // the app itself
-  ...o
+  ...r
   // everything in `static`
 ];
 self.addEventListener("install", (t) => {
@@ -37,7 +37,7 @@ self.addEventListener("fetch", (t) => {
     return;
   async function a() {
     const s = new URL(t.request.url), n = await caches.open(i);
-    if (l.includes(s.pathname))
+    if (console.log(s.pathname), !s.pathname.includes("songs.json") && l.includes(s.pathname))
       return n.match(t.request);
     try {
       const c = await fetch(t.request);
