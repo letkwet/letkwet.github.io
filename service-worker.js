@@ -1,19 +1,19 @@
 const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), o = [
-  e + "/internal/immutable/entry/app.f11dc075.js",
-  e + "/internal/immutable/nodes/0.5d5ef107.js",
-  e + "/internal/immutable/nodes/1.ac7825c8.js",
-  e + "/internal/immutable/assets/2.20071936.css",
-  e + "/internal/immutable/nodes/2.2f560b86.js",
-  e + "/internal/immutable/chunks/index.847c3200.js",
-  e + "/internal/immutable/chunks/paths.e60ec5d3.js",
-  e + "/internal/immutable/chunks/scheduler.7215518b.js",
-  e + "/internal/immutable/chunks/singletons.6131c33c.js",
-  e + "/internal/immutable/entry/start.3e79dc01.js"
+  e + "/internal/immutable/entry/app.1f240f4f.js",
+  e + "/internal/immutable/nodes/0.ee9d3fc1.js",
+  e + "/internal/immutable/nodes/1.ee8a5a5e.js",
+  e + "/internal/immutable/assets/2.72972c6e.css",
+  e + "/internal/immutable/nodes/2.548f6d45.js",
+  e + "/internal/immutable/chunks/index.4dfd544e.js",
+  e + "/internal/immutable/chunks/paths.3090b573.js",
+  e + "/internal/immutable/chunks/scheduler.1d0e75b3.js",
+  e + "/internal/immutable/chunks/singletons.7a5a9665.js",
+  e + "/internal/immutable/entry/start.3d74f1e0.js"
 ], r = [
   e + "/letkwet.ico",
   e + "/letkwet.svg",
   e + "/songs.json"
-], u = "1701278535499", i = `cache-${u}`, l = [
+], u = "1702917989350", i = `cache-${u}`, l = [
   ...o,
   // the app itself
   ...r
