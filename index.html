@@ -1,38 +1,53 @@
-<!DOCTYPE html >
-<html lang="en">
+<!DOCTYPE html>
+<html lang="my">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./letkwet.ico" />
+		<link rel="manifest" href="./manifest.webmanifest" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#EE992D" />
+		<meta name="description" content="မြန်မာသီချင်းလက်ကွက်များ - offline Myanmar songbook" />
+		<link href="./internal/immutable/entry/start.D2vtVvLZ.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/DaT8xB3z.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/DWLetK_X.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/D31DVMPI.js" rel="modulepreload">
+		<link href="./internal/immutable/entry/app.DE2s_Ib3.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/C5WgoyR4.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/BRCNIpyd.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/BtWHwBrI.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/De1BHVOk.js" rel="modulepreload">
+		<link href="./internal/immutable/nodes/0.D-2Gs7L4.js" rel="modulepreload">
+		<link href="./internal/immutable/chunks/FsdlCllr.js" rel="modulepreload">
+		<link href="./internal/immutable/nodes/2.CE57Vydn.js" rel="modulepreload">
 		
-		<link rel="modulepreload" href="./internal/immutable/entry/start.e92f3352.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/scheduler.1d0e75b3.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.03d3b0ce.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/paths.59e3d48c.js">
-		<link rel="modulepreload" href="./internal/immutable/entry/app.78e0799b.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/index.4dfd544e.js">
+		<link href="./internal/immutable/assets/2.CvSTRn9K.css" rel="stylesheet">
 	</head>
 	<body>
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_u80rmi = {
-						base: new URL(".", location).pathname.slice(0, -1),
-						env: {}
+					__sveltekit_zultkm = {
+						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./internal/immutable/entry/start.e92f3352.js"),
-						import("./internal/immutable/entry/app.78e0799b.js")
+						import("./internal/immutable/entry/start.D2vtVvLZ.js"),
+						import("./internal/immutable/entry/app.DE2s_Ib3.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
 
 					if ('serviceWorker' in navigator) {
+						const script_url = './service-worker.js';
+						const policy = globalThis?.window?.trustedTypes?.createPolicy(
+							'sveltekit-trusted-url',
+							{ createScriptURL(url) { return url; } }
+						);
+						const sanitised = policy?.createScriptURL(script_url) ?? script_url;
 						addEventListener('load', function () {
-							navigator.serviceWorker.register('./service-worker.js');
+							navigator.serviceWorker.register(sanitised);
 						});
 					}
 				}
